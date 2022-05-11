@@ -7,7 +7,7 @@ using Rademaker.IotEdge;
 await new HostBuilder()
     .ConfigureServices(services =>
     {
-        services.AddLogging(logginBuilder => logginBuilder.SetMinimumLevel(LogLevel.Debug).AddJsonConsole());
+        services.AddLogging(logginBuilder => logginBuilder.SetMinimumLevel(LogLevel.Debug).AddConsole());
         services.AddHostedService<SendMessagesHostedService>();
         services.AddIotEdge(iotEdgeBuilder =>
         {

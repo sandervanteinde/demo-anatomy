@@ -78,9 +78,9 @@
       "properties.desired": {
         "schemaVersion": "1.2",
         "routes": {
-          "AnatomyIotEdgeToIoTHub": "FROM /messages/modules/AnatomyIotEdge/outputs/* INTO $upstream",
-          "sensorToAnatomyIotEdge": "FROM /messages/modules/SimulatedTemperatureSensor/outputs/temperatureOutput INTO BrokeredEndpoint(\"/modules/AnatomyIotEdge/inputs/input1\")",
-          "AspNetIotEdgeDeviceToIoTHub": "FROM /messages/modules/AspNetIotEdgeDevice/outputs/* INTO $upstream"
+          // "AnatomyIotEdgeToIoTHub": "FROM /messages/modules/AnatomyIotEdge/outputs/* INTO $upstream",
+          // "AspNetIotEdgeDeviceToIoTHub": "FROM /messages/modules/AspNetIotEdgeDevice/outputs/* INTO $upstream",
+          "sensorToAnatomyIotEdge": "FROM /messages/modules/AspNetIotEdgeDevice/outputs/output1 INTO BrokeredEndpoint(\"/modules/AnatomyIotEdge/inputs/input1\")"
         },
         "storeAndForwardConfiguration": {
           "timeToLiveSecs": 7200
